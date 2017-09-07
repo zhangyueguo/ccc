@@ -78,9 +78,9 @@ bool MyQueue::DeQueue(int &element)
 
 void MyQueue::QueueTraverse()
 {
-    for(int i=m_iHead;i<m_iQueueLen;i++)
+    for(int i=m_iHead;i<m_iQueueLen+m_iHead;i++)
     {
-        cout << m_pQueue[i%m_iQueueLen] <<endl;
+        cout << m_pQueue[i%m_iQueueCapacity] <<endl;
     }
 }
 
